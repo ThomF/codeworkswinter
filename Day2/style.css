@@ -1,0 +1,78 @@
+/*SECTION - Main design tags */
+
+header {
+  background-color: rgb(124, 124, 235);
+  border: 0.15rem solid black;
+
+  margin: 0%;
+  display: block;
+  height: 10vh;
+}
+header p {
+  text-align: center;
+  color: white;
+  margin: 0;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+body {
+  margin: 0;
+}
+footer {
+  background-color: rgb(66, 66, 167);
+  border: 0.15rem solid black;
+  padding: 5vh;
+}
+main {
+  margin-top: 5vh;
+}
+/* SECTION - Tools */
+.display-flex {
+  display: flex;
+}
+
+.justify-content {
+  justify-content: center;
+}
+.align-items {
+  text-align: center;
+}
+.header-p {
+}
+.hero-img {
+  height: 100px;
+  width: 150px;
+  object-fit: cover;
+}
+
+h4 {
+  margin: 1vh 0 0 0;
+}
+.bar {
+  background-color: rgba(83, 103, 169, 0.522);
+  padding: 0.3rem;
+  width: 31rem;
+  justify-content: center;
+  margin-left: 15.5rem;
+}
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+.card {
+  flex: content;
+}
+.hero-card {
+  padding-top: 5rem;
+  margin-right: 6rem;
+}
+.hero-text {
+  margin-left: 20rem;
+  margin-right: 19rem;
+}
+.card-art {
+  font-size: 1rem;
+}
+@media screen {
+  .hero-text {
+  }
+}
