@@ -5,3 +5,8 @@ background-size: cover;}
 .hero-logo{
     border-radius: 50%;
 }
+
+a{
+color: black;
+text-decoration: none;
+}
