@@ -5,9 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
     <title>CLONESITE</title>
+
+    <style>
+      body.debug .container,
+      body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+      }
+
+      body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+      }
+
+      body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+      }
+    </style>
   </head>
-  <body>
-    <main></main>
+
+  <body class="debug">
+
+    <header>
+<!--NOTE NAV section-->
+
+      <div class="container mb-2 mt-2">
+        <div class="row justify-content-between">
+        <div class="col-6 text-center">
+          <img class="hero-logo" src="https://via.placeholder.com/40" alt="">
+        </div>
+        <div class="col-6 d-flex flex-row justify-content-between ">
+            <a href="">work</a>
+            <a href="">about</a>
+            <a href="">store</a>
+            <a href="">expertise</a>
+            <a href="">blog</a>
+            <a href="">contact</a>
+        </div>
+      </div>
+      </div>
+
+    </header>
+
+    <main>
+      <div class="container-fluid">
+        <div class="row hero">
+          <div class="col-10 mb-5 mt-5 ">
+            <h1>Crown Maple</h1>
+            <h4>Not all Crowns are Created Equal</h4>
+          </div>
+          <div class="col-6"></div>
+        </div>
+      </div>
+      <!--NOTE Filler Text-->
+      <div class="container-fluid bg-dark text-light">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 mt-3 mb-3">
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iusto suscipit quia, earum nam, facilis est, sint natus possimus eligendi dignissimos dolor labore incidunt animi.</p>
+          </div>
+        </div>
+      </div>
+      <!--NOTE 3x image -->
+      <div class="container">
+        <div class="row d-flex mt-5 justify-content-between">
+          <div class="col-4">
+            <img class="hero-img" src="https://via.placeholder.com/200" alt="">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+            <div class="col-4">
+            <img class="hero-img" src="https://via.placeholder.com/200" alt="">
+          <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="col-4">
+  <img class="hero-img" src="https://via.placeholder.com/200" alt="">
+  <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+<footer></footer>
   </body>
 </html>
