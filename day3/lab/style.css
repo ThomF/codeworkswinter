@@ -15,8 +15,11 @@ text-decoration: none;
 
 }
 .hero-image2{
-    
+    height: 200px;
+    width: 200px;
 }
-.hero-image3{
-    
+
+
+body{
+    background-color: rgb(239, 236, 236);
 }
