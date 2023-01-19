@@ -1,0 +1,20 @@
+.bg-header{
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1575722290270-626b0208df99?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
+}
+
+.bg-vh{
+    height: 95vh;
+}
+.a-nav{
+    color: inherit;
+    text-decoration: none;
+    }
+
+.img-border {
+    border: 1.2em solid rgb(241, 241, 241);
+}
+
+.agressive-shadow {
+    box-shadow: 3px 3px 6px black
+}

@@ -10,12 +10,84 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header>
+<style> 
+    body.debug .container,
+    body.debug .container-fluid {
+      outline: 2px double blue;
+      outline-offset: -2px;
+    }
+    body.debug .row {
+      outline: 2px dashed red;
+      outline-offset: -2px;
+    }
+    body.debug [class*="col-"] {
+      outline: 2px dotted forestgreen;
+      outline-offset: -3px;
+    }
+  </style>
 
+<body class="debug">
+    <!--NOTE NAV AND HEADER-->
+    <header>
+    <div class="container-fluid ">
+        <div class="row bg-header bg-vh text-center align-items-center ">
+            <div class="col-12 text-light pd-4">
+                <img src="https://via.placeholder.com/50" alt="" class="pb-2">
+                <h1 >Welcome to Knight Studios</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <button class=" btn btn-success">Get Started</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row my-2 shadow">
+            <div class="col-5 ps-5">
+                <img src="https://via.placeholder.com/40" alt="">
+            </div>
+            <div class="col-7 d-flex flex-row justify-content-around align-items-center ">
+                <a href="" class="a-nav">Home</a>
+                <a href="" class="a-nav">about</a>
+                <a href="" class="a-nav">services</a>
+                <a href="" class="a-nav">team</a>
+                <a href="" class="a-nav">portfolio</a>
+                <a href="" class="a-nav">pricing</a>
+                <a href="" class="a-nav">dropdown</a>
+                <a href="" class="a-nav">contact</a>
+            </div>
+        </div>
+    </div>
     </header>
 
     <main>
+        <div class="container">
+            <div class="row text-center mt-5 pb-2">
+                <div class="col-12">
+                    <h1>About Us</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6 text-center">
+                    <img src="https://via.placeholder.com/400" alt="" class="img-border agressive-shadow">
+                </div>
+                <div class="col-6">
+                    <h3>Lorem ipsum dolor sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, pariatur!</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, unde.</p>
+                    <div class="ps-5">
+                        <i class="mdi mdi-flash">
+                        </i>
+
+                            <p>Lorem, ipsum dolor.</p>
+                            <p>Lorem, ipsum dolor.</p>
+                            <p>Lorem, ipsum dolor.</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex veniam tempora minus expedita officiis culpa saepe unde blanditiis eius consequuntur.</p>
+                </div>
+            </div>
+        </div>
 
     </main>
 
