@@ -14,35 +14,89 @@
     <title>ScoreBoard</title>
 </head>
 
-<body>
+<!-- <style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
+
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style> -->
+
+<body class="debug">
     <header>
-        <div class="container">
+        <div class="container mt-5">
             <div class="row">
-                <div class="col-12">
-                    <button class="btn btn-fail" onclick="reset()">RESET</button>
+                <div class="col-10"></div>
+                <div class="col-2">
+                    <button class="btn btn-warning btn-sm justify-content-end" onclick="reset()">RESET</button>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <div class="container">
+        <!-- NOTE home away text -->
+        <div class="container pt-3">
             <div class="row text-center">
-                <div class="col-6 border-score">
-                    <span id="home-score">00</span>
+                <div class="col-6">
+                    <div>
+                        <h1 class="text-light">HOME</h1>
+                    </div>
                 </div>
-                <div class="col-6 border-score">
-                    <span id="visitor-score">00</span>
+                <div class="col-6">
+                    <div>
+                        <h1 class="text-light">Away</h1>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <!-- NOTE scorecards -->
+        <div class="container mt-3 mb-3 score-card-container">
+            <div class="row text-center">
+                <div class="col-12 space-evenly">
+                    <div class="row">
+                        <div class="col-6 border-score padding-start">
+                            <div class="card card-score pt-card fs-1">
+                                <span id="home-score">00</span>
+                            </div>
+                        </div>
+                        <div class="col-6 border-score padding-start">
+                            <div class="card card-score pt-card fs-1">
+                                <span id="visitor-score">00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container mt-4">
             <div class="row">
                 <div class="col-6 text-center">
                     <button class="btn btn-primary btn-lg" onclick="plusOne()">+1</button>
                 </div>
                 <div class="col-6 text-center">
-                    <button class="btn btn-primary btn-lg" onclick="plusOneAway()">+1</button>
+                    <button class="btn btn-primary btn-lg btn-block" onclick="plusOneAway()">+1</button>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-6 text-center">
+                    <button class="btn btn-primary btn-lg" onclick="plusThree()">+3</button>
+                </div>
+                <div class="col-6 text-center">
+                    <button class="btn btn-primary btn-lg" onclick="plusThreeAway()">+3</button>
                 </div>
             </div>
         </div>
