@@ -32,3 +32,7 @@ body{
     border: 1px solid rgb(0, 89, 255);
     box-shadow: 2px 2px 5px 5px rgb(0, 145, 255);
 }
+
+.font-cross{
+    font-family: Macondo;
+}
