@@ -2,7 +2,10 @@ body{
     background-color: rgba(66, 65, 65, 0.414);
 }
 
-
+.border-score{
+    background-color: rgba(0, 255, 255, 0.502);
+    border: 2.5px solid darkblue;
+}
 
 .card-score{
     height: 5em;
@@ -13,13 +16,19 @@ padding-left: 10vh;
 }
 
 .pt-card{
-padding-top: 8vh;
+padding-top: 5vh;
 }
 .score-card-container{
     background-color: rgba(0, 0, 255, 0.316);
-    border: 3px solid rgb(0, 89, 255);
-    box-shadow: 10px 10px 40px 20px #0ff;
+    border: 1px solid rgb(0, 89, 255);
+    box-shadow: 10px 10px 40px 20px rgb(0, 145, 255);
 }
 body{
     background-image: url(https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+}
+
+.score-number{
+    background-color: rgba(0, 0, 255, 0.316);
+    border: 1px solid rgb(0, 89, 255);
+    box-shadow: 2px 2px 5px 5px rgb(0, 145, 255);
 }

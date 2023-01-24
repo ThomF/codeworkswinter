@@ -46,7 +46,8 @@
 
     <main>
         <!-- NOTE home away text -->
-        <div class="container pt-3">
+        <!-- NOTE scorecards -->
+        <div class="container mt-3 mb-3 score-card-container pt-4 pb-5">
             <div class="row text-center">
                 <div class="col-6">
                     <div>
@@ -59,19 +60,16 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- NOTE scorecards -->
-        <div class="container mt-3 mb-3 score-card-container">
             <div class="row text-center">
                 <div class="col-12 space-evenly">
                     <div class="row">
-                        <div class="col-6 border-score padding-start">
-                            <div class="card card-score pt-card fs-1">
+                        <div class="col-6 padding-start">
+                            <div class="card card-score border-score pt-card fs-1">
                                 <span id="home-score">00</span>
                             </div>
                         </div>
-                        <div class="col-6 border-score padding-start">
-                            <div class="card card-score pt-card fs-1">
+                        <div class="col-6 padding-start">
+                            <div class="card card-score border-score pt-card fs-1">
                                 <span id="visitor-score">00</span>
                             </div>
                         </div>
@@ -83,20 +81,24 @@
         <div class="container mt-4">
             <div class="row">
                 <div class="col-6 text-center">
-                    <button class="btn btn-primary btn-lg" onclick="plusOne()">+1</button>
+                    <button class="btn btn-primary btn-lg fs-2 score-number" onclick="plusOne()">HOME
+                        +1</button>
                 </div>
                 <div class="col-6 text-center">
-                    <button class="btn btn-primary btn-lg btn-block" onclick="plusOneAway()">+1</button>
+                    <button class="btn btn-primary btn-lg btn-block fs-2 score-number" onclick="plusOneAway()">AWAY
+                        +1</button>
                 </div>
             </div>
         </div>
         <div class="container mt-4">
             <div class="row">
                 <div class="col-6 text-center">
-                    <button class="btn btn-primary btn-lg" onclick="plusThree()">+3</button>
+                    <button class="btn btn-primary btn-lg fs-2 score-number" onclick="plusThree()">HOME
+                        +3</button>
                 </div>
                 <div class="col-6 text-center">
-                    <button class="btn btn-primary btn-lg" onclick="plusThreeAway()">+3</button>
+                    <button class="btn btn-primary btn-lg fs-2 score-number" onclick="plusThreeAway()">AWAY
+                        +3</button>
                 </div>
             </div>
         </div>
