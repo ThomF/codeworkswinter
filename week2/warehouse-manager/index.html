@@ -16,9 +16,51 @@
         defer></script>
     <title>Warehouse</title>
 </head>
+<!-- <style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
 
-<body>
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
 
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style> -->
+
+<body class="debug">
+    <header></header>
+    <main>
+        <div class="container mt-5 bg-dark text-light text-center">
+            <div class="row pt-3 pb-3 ps-3 pe-3">
+                <div class="col-3">
+                    <h1>Filter By</h1>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="filterHeavy()">HEAVY</button>
+                </div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+        <!--SECTION Data-->
+        <div class="container bg-dark text-light text-center ">
+            <div class="row pt-3 pb-3 ps-3 pe-3 ">
+                <div class="col-6">
+                    <span id="name"></span>
+                </div>
+                <div class="col-6">
+                    <span id="tracking"></span>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script src="app.js"></script>
 </body>
