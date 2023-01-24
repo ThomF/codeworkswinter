@@ -2,9 +2,7 @@ body{
     background-color: rgba(66, 65, 65, 0.414);
 }
 
-.border-score{
-    border: 2px solid black;
-}
+
 
 .card-score{
     height: 5em;
