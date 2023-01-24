@@ -56,36 +56,24 @@ function drawNames(array){
     console.log('Draw names');
     array.forEach(package => {
         names += `
-        <div class="row white-border">
+            <div class="row white-border mb-3">
                 <div class="col-3 fs-1 green-text">TO: </div>
-                <div class="col-9 fs-2">${package.to}</div>
+                <div class="col-3 fs-1 green-text">${package.to}</div>
+                <div class="col-3 fs-1 green-text">ID: </div>
+                <div class="col-3 fs-1 green-text">${package.trackingNumber}</div>
             </div>`
     })
-
     nameElement.innerHTML = names
 }
 
-function drawTracking(track){
-    let idElement = document.getElementById('tracking')
-    let trackingTemplate = ''
-
-    packages.forEach(tracking => {
-        trackingTemplate += `
-        <div class="row white-border">
-                <div class="col-3 fs-1 green-text">ID: </div>
-                <div class="col-9 fs-2">${tracking.trackingNumber}</div>
-            </div>`
-    })
-    
-    idElement.innerHTML = trackingTemplate
-}
+// SECTION BUTTON
 
 function filterHeavy(){
-    const heavyBox = packages.filter(package => package.weight > 5, packages.trackingNumber )
+    const heavyBox = packages.filter(package => package.weight > 5)
+    const heavyBoxId = packages.filter(package => packages.trackingNumber)
     console.log(heavyBox)
     drawNames(heavyBox)
-    drawTracking(heavyBox)
+    drawTracking(heavyBoxId)
 }
 
 drawNames(packages)
-drawTracking(packages)
