@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(242, 211, 154);
+}
+
+main{
+    flex-grow: 1;
+}
+
+.cart{
+    min-height: calc(100vh - 162px);
+    background-color: wheat;
+}

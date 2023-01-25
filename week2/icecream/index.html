@@ -33,12 +33,58 @@
 </style>
 
 <body class="debug">
-    <header></header>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <h1>Infinity Cones</h1>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <main></main>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5 cart">
+                    <div class="row" id="cart">
+                        <div class="col-12 card">
+                            <h1>CART</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- SECTION template -->
+                <div class="col-7 store">
+                    <div class="row" id="item-cards">
+                        <div class="col-md-3 my-3">
+                            <div class="card product-card">
+                                <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aWNlY3JlYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                                    alt="icecream">
+                                <div class="card-body">
+                                    <div class="align-items-center justify-content-between">
+                                        <p><b>Vanilla</b></p>
+                                        <p>$1.99</p>
+                                    </div>
+                                    <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCart()">
+                                        <i class="mdi mdi-cart"></i> <small>ADD</small>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-12 bg-dark text-light">
+                    <h6>@@ME</h6>
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="app.js"></script>
 </body>
