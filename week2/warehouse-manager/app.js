@@ -75,5 +75,12 @@ function filterHeavy(){
     drawNames(heavyBox)
     drawTracking(heavyBoxId)
 }
+function filterFragile(){
+    const fragileBox = packages.filter(package => package.weight < 5)
+    const fragileBoxId = packages.filter(package => packages.trackingNumber)
+    console.log(fragileBox)
+    drawNames(fragileBox)
+    drawTracking(fragileBoxId)
+}
 
 drawNames(packages)
