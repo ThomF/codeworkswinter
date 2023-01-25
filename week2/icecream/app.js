@@ -35,7 +35,60 @@ const containers = [{
 // SECTION Functions
 
 function drawParlor(){
-    let parlorElm = document.getElementById('item-cards')
+    // SECTION Draw Toppings
+    let toppingElm = document.getElementById('topping-cards')
+    let templateTopping = ''
+
+    for(let i = 0; i < toppings.length; i++){
+        const topping = toppings[i];
+        templateTopping +=  `
+                    <div class="col-md-3 my-3">
+                        <div class="card product-card card-height">
+                            <img class="img-fluid" src="${topping.image}"
+                                alt="icecream">
+                            <div class="card-body">
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p><b>${topping.name}</b></p>
+                                    <p>$${topping.price}</p>
+                                </div>
+                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCart()">
+                                    <i class="mdi mdi-cart"></i> <small>ADD</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+        
+        `
+    }
+
+    // SECTION Draw Cones
+    let conesElm = document.getElementById('cone-cards')
+    let templateCones = ''
+
+    for(let i = 0; i < containers.length; i++){
+        const cone = containers[i];
+        templateCones +=  `
+                    <div class="col-md-3 my-3">
+                        <div class="card product-card card-height">
+                            <img class="img-fluid" src="${cone.image}"
+                                alt="icecream">
+                            <div class="card-body">
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <p><b>${cone.name}</b></p>
+                                    <p>$${cone.price}</p>
+                                </div>
+                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCart()">
+                                    <i class="mdi mdi-cart"></i> <small>ADD</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+        
+        `
+    }
+
+    // SECTION Draw IceCream
+    let parlorElm = document.getElementById('item-cards-ic')
     let template = ''
 
     for(let i = 0; i < iceCream.length; i++){
@@ -48,7 +101,7 @@ function drawParlor(){
                             <div class="card-body">
                                 <div class="d-flex flex-row align-items-center justify-content-between">
                                     <p><b>${iC.name}</b></p>
-                                    <p>${iC.price}</p>
+                                    <p>$${iC.price}</p>
                                 </div>
                                 <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCart()">
                                     <i class="mdi mdi-cart"></i> <small>ADD</small>
@@ -60,7 +113,11 @@ function drawParlor(){
         `
     }
 
+    toppingElm.innerHTML = templateTopping
+    conesElm.innerHTML = templateCones
     parlorElm.innerHTML = template
+
+
     console.log('DRAW PARLOR')
 }
 
