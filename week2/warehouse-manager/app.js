@@ -82,9 +82,10 @@ function filterFragile(){
     drawNames(fragileBox)
     drawTracking(fragileBoxId)
 }
-function filterPriority(){
-    let priority = window.prompt('Filter by Priority! | Express | Standard | Free |')
-    const priorityBox = packages.find(package => package.priorityLevel)
-}
+
+// function filterPriority(){
+//     let priority = window.prompt('Filter by Priority! | Express | Standard | Free |')
+//     const priorityBox = packages.find(package => package.priorityLevel)
+// }
 
 drawNames(packages)
