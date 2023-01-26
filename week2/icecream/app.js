@@ -53,7 +53,7 @@ function drawParlor(){
                                     <p><b>${topping.name}</b></p>
                                     <p>$${topping.price}</p>
                                 </div>
-                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCart()">
+                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCartTopping('${topping.name}')">
                                     <i class="mdi mdi-cart"></i> <small>ADD</small>
                                 </button>
                             </div>
@@ -79,7 +79,7 @@ function drawParlor(){
                                     <p><b>${cone.name}</b></p>
                                     <p>$${cone.price}</p>
                                 </div>
-                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCart()">
+                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCartCones('${cone.name}')">
                                     <i class="mdi mdi-cart"></i> <small>ADD</small>
                                 </button>
                             </div>
@@ -144,6 +144,42 @@ function drawCart(){
     let total = cartTotal()
     cartElm.innerHTML = template
     cartTotalElm.innerHTML = total
+}
+
+function addToCartTopping(name){
+    let itemAdd = toppings.find(p => p.name == name)
+    let productInCart = cart.find(p => p.name == name)
+
+    if(productInCart){
+        productInCart.quantity++
+    }else{
+        cart.push({
+            name: itemAdd.name,
+            image: itemAdd.image,
+            price: itemAdd.price,
+            quantity: 1
+        })
+    }
+
+    drawCart()
+}
+
+function addToCartCones(name){
+    let itemAdd = containers.find(p => p.name == name)
+    let productInCart = cart.find(p => p.name == name)
+
+    if(productInCart){
+        productInCart.quantity++
+    }else{
+        cart.push({
+            name: itemAdd.name,
+            image: itemAdd.image,
+            price: itemAdd.price,
+            quantity: 1
+        })
+    }
+
+    drawCart()
 }
 
 function addToCart(name){
