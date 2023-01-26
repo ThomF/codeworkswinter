@@ -146,6 +146,7 @@ function drawCart(){
     cartTotalElm.innerHTML = total
 }
 
+// SECTION ADD TO CART FUNCTIONS FOR EACH []
 function addToCartTopping(name){
     let itemAdd = toppings.find(p => p.name == name)
     let productInCart = cart.find(p => p.name == name)
