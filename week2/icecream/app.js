@@ -17,7 +17,7 @@ const toppings = [{
     image: 'https://upload.wikimedia.org/wikipedia/commons/f/f6/Sprinkles2.jpg',
     price: 1
 }, {
-    name: 'Chocolate Chips',
+    name: 'ChocoChips',
     image: 'https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chocolate-chips.jpg?quality=82&strip=1&resize=640%2C360',
     price: 2
 }]
@@ -45,22 +45,22 @@ function drawParlor(){
         const topping = toppings[i];
         templateTopping +=  `
                     <div class="col-md-3 my-3">
+                    <button class="btn" onclick="addToCartTopping('${topping.name}')">
                         <div class="card product-card card-height">
-                            <img class="img-fluid" src="${topping.image}"
+                            <img class="parlor-card" src="${topping.image}"
                                 alt="icecream">
                             <div class="card-body">
                                 <div class="d-flex flex-row align-items-center justify-content-between">
                                     <p><b>${topping.name}</b></p>
                                     <p>$${topping.price}</p>
                                 </div>
-                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCartTopping('${topping.name}')">
-                                    <i class="mdi mdi-cart"></i> <small>ADD</small>
-                                </button>
-                            </div>
+                                
+                                    
+                                </div>
                         </div>
+                    </button>          
                     </div>
-        
-        `
+                    `
     }
 
     // SECTION Draw Cones
@@ -70,21 +70,20 @@ function drawParlor(){
     for(let i = 0; i < containers.length; i++){
         const cone = containers[i];
         templateCones +=  `
-                    <div class="col-md-3 my-3">
+                <div class="col-md-3 my-3">
+                    <button class="btn" title="Add To Cart" onclick="addToCartCones('${cone.name}')">
                         <div class="card product-card card-height">
-                            <img class="img-fluid" src="${cone.image}"
+                            <img class="parlor-card" src="${cone.image}"
                                 alt="icecream">
                             <div class="card-body">
                                 <div class="d-flex flex-row align-items-center justify-content-between">
                                     <p><b>${cone.name}</b></p>
                                     <p>$${cone.price}</p>
-                                </div>
-                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCartCones('${cone.name}')">
-                                    <i class="mdi mdi-cart"></i> <small>ADD</small>
-                                </button>
+                                </div>                                
                             </div>
                         </div>
-                    </div>
+                    </button>    
+                </div>
         
         `
     }
@@ -96,21 +95,20 @@ function drawParlor(){
     for(let i = 0; i < iceCream.length; i++){
         const iC = iceCream[i];
         template +=  `
-                    <div class="col-md-3 my-3">
+                <div class="col-md-3 my-3">
+                    <button class="btn" title="Add To Cart" onclick="addToCart('${iC.name}')">
                         <div class="card product-card card-height">
-                            <img class="img-fluid" src="${iC.image}"
+                            <img class="parlor-card" src="${iC.image}"
                                 alt="icecream">
                             <div class="card-body">
                                 <div class="d-flex flex-row align-items-center justify-content-between">
                                     <p><b>${iC.name}</b></p>
                                     <p>$${iC.price}</p>
-                                </div>
-                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCart('${iC.name}')">
-                                    <i class="mdi mdi-cart"></i> <small>ADD</small>
-                                </button>
+                                </div>                                
                             </div>
                         </div>
-                    </div>
+                    </button>
+                </div>
         
         `
     }

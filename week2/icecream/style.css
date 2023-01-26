@@ -12,7 +12,10 @@ main{
 .cart{
     min-height: 100vh;
 }
-
+.parlor-card{
+    height: 100px;
+    width: cover;
+}
 /* .card-height{
     height: 200px;
 } */
