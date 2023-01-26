@@ -126,12 +126,13 @@ function drawParlor(){
 
 function drawCart(){
     let cartElm = document.getElementById('cart')
-    // let cartTotalElm = document.getElementById()
+    let cartTotalElm = document.getElementById('cart-total')
 
     let template =''
 
     cart.forEach(item => {
-        template += `<div class="row">
+        template += `
+    <div class="row">
         <div class="col-6">
             <h6>${item.name}</h6>
         </div>
@@ -146,7 +147,7 @@ function drawCart(){
         </div>
     </div>`
     })
-
+    let total = cartTotal()
     cartElm.innerHTML = template
 }
 
@@ -164,7 +165,7 @@ function addToCart(name){
             // name: itemAdd.name,
             // image: itemAdd.image,
             // price: itemAdd.price
-
+        quantity: 1
         
     }
     
@@ -172,7 +173,13 @@ function addToCart(name){
 }
 
 function cartTotal(){
+    let total = 0
 
+    cart.forEach(p =>{
+        total += p.price * p.quantity
+    })
+
+    return total
 }
 
 drawParlor()
