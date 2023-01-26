@@ -21,6 +21,8 @@ const boss = {
     level: 1
 }
 
+let healthPercentage = 0
+
 
 function attackBoss(){
 
@@ -31,11 +33,14 @@ function attackBoss(){
     })
     
     let bossHealth = boss.health -= heroDamageTotal
-    
-    if (bossHealth <= 0) {
-        bossHealth += 100
+    // debugger
+    if (boss.health <= 0) {
+       boss.health = boss.maxHealth += 35
     }
-    console.log(bossHealth)
+
+    healthPercentage = (boss.health/boss.maxHealth)*100
+    console.log('[Boss health]', boss.health, '[MAX HEALTH]', boss.maxHealth, '[Health percentage]', healthPercentage)
+    drawHealthBar()
     
    }
 
@@ -51,6 +56,17 @@ function drawHealthBar(){
 
 let healthBarElem = document.getElementById("health-bar")    
 let template = ''
+
+
+    template += `
+    <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+                                aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar bg-danger" style="width:${healthPercentage}%"></div>
+                            </div>
+    `
+
+
+healthBarElem.innerHTML = template
 
 }
 
