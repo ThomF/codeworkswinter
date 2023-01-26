@@ -109,7 +109,6 @@ function drawParlor(){
                         </div>
                     </button>
                 </div>
-        
         `
     }
 
