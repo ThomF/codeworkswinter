@@ -36,12 +36,16 @@ function attackBoss(){
     // debugger
     if (boss.health <= 0) {
        boss.health = boss.maxHealth += 35
-    }
 
-    healthPercentage = (boss.health/boss.maxHealth)*100
-    console.log('[Boss health]', boss.health, '[MAX HEALTH]', boss.maxHealth, '[Health percentage]', healthPercentage)
-    drawHealthBar()
+       heroes.forEach(hero => {
+        hero.damage += 5
+        hero.health += 10
+    })
+    console.log(heroes)
     
+    }
+    healthPercentage = (boss.health/boss.maxHealth)*100
+    drawHealthBar()
    }
 
     // let bossHealth = boss.find(boss => boss.health == health)
