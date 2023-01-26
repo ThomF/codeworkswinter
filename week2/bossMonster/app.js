@@ -21,6 +21,11 @@ const boss = {
     level: 1
 }
 
+let backpack = {
+    gold: 10,
+    potions: 0
+}
+
 let healthPercentage = 0
 
 
@@ -36,12 +41,13 @@ function attackBoss(){
     // debugger
     if (boss.health <= 0) {
        boss.health = boss.maxHealth += 35
+       backpack.gold += 20
 
        heroes.forEach(hero => {
         hero.damage += 5
         hero.health += 10
     })
-    console.log(heroes)
+    console.log(backpack)
     
     }
     healthPercentage = (boss.health/boss.maxHealth)*100
