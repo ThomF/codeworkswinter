@@ -136,16 +136,14 @@ function drawCart(){
         <div class="col-6">
             <h6>${item.name}</h6>
         </div>
-        <div class="col-2">
+        <div class="col-6">
             <h6>${item.quantity}</h6>
-        </div>
-        <div class="col-2">
-            <h6>${item.price}</h6>
         </div>
     </div>`
     })
     let total = cartTotal()
     cartElm.innerHTML = template
+    cartTotalElm.innerHTML = total
 }
 
 function addToCart(name){
