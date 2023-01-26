@@ -137,10 +137,7 @@ function drawCart(){
             <h6>${item.name}</h6>
         </div>
         <div class="col-2">
-            <h6>Qty</h6>
-        </div>
-        <div class="col-2">
-            <h6>Each</h6>
+            <h6>${item.quantity}</h6>
         </div>
         <div class="col-2">
             <h6>${item.price}</h6>
@@ -152,20 +149,20 @@ function drawCart(){
 }
 
 function addToCart(name){
-    console.log('hello')
-
     let itemAdd = iceCream.find(p => p.name == name)
     console.log(itemAdd)
+
     let productInCart = cart.find(p => p.name == name)
 
     if(productInCart){
         productInCart.quantity++
     }else{
-        cart.push(itemAdd)
-            // name: itemAdd.name,
-            // image: itemAdd.image,
-            // price: itemAdd.price
-        quantity: 1
+        cart.push({
+            name: itemAdd.name,
+            image: itemAdd.image,
+            price: itemAdd.price,
+            quantity: 1
+        })
         
     }
     
