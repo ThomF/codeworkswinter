@@ -20,3 +20,42 @@ const boss = {
     damage: 5,
     level: 1
 }
+
+
+function attackBoss(){
+
+    let heroDamageTotal = 0
+    
+    heroes.forEach(p => {
+        heroDamageTotal += p.damage
+    })
+    
+    let bossHealth = boss.health -= heroDamageTotal
+    
+    if (bossHealth <= 0) {
+        bossHealth += 100
+    }
+    console.log(bossHealth)
+    
+   }
+
+    // let bossHealth = boss.find(boss => boss.health == health)
+    
+
+
+function drawHeroes(){}
+function drawShop(){}
+
+
+function drawHealthBar(){
+
+let healthBarElem = document.getElementById("health-bar")    
+let template = ''
+
+}
+
+
+function buyPotion(){}
+function buyHeroOne(){}
+function buyHeroTwo(){}
+function youLost(){}
