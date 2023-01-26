@@ -11,7 +11,6 @@ main{
 
 .cart{
     min-height: calc(100vh - 162px);
-    background-color: wheat;
 }
 
 /* .card-height{

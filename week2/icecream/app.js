@@ -32,6 +32,8 @@ const containers = [{
     price: 4
 }]
 
+const cart = []
+
 // SECTION Functions
 
 function drawParlor(){
@@ -103,7 +105,7 @@ function drawParlor(){
                                     <p><b>${iC.name}</b></p>
                                     <p>$${iC.price}</p>
                                 </div>
-                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCart()">
+                                <button class="btn btn-outline-secondary" title="Add To Cart" onclick="addToCart('${iC.name}')">
                                     <i class="mdi mdi-cart"></i> <small>ADD</small>
                                 </button>
                             </div>
@@ -121,5 +123,56 @@ function drawParlor(){
     console.log('DRAW PARLOR')
 }
 
+
+function drawCart(){
+    let cartElm = document.getElementById('cart')
+    // let cartTotalElm = document.getElementById()
+
+    let template =''
+
+    cart.forEach(item => {
+        template += `<div class="row">
+        <div class="col-6">
+            <h6>${item.name}</h6>
+        </div>
+        <div class="col-2">
+            <h6>Qty</h6>
+        </div>
+        <div class="col-2">
+            <h6>Each</h6>
+        </div>
+        <div class="col-2">
+            <h6>${item.price}</h6>
+        </div>
+    </div>`
+    })
+
+    cartElm.innerHTML = template
+}
+
+function addToCart(name){
+    console.log('hello')
+
+    let itemAdd = iceCream.find(p => p.name == name)
+    console.log(itemAdd)
+    let productInCart = cart.find(p => p.name == name)
+
+    if(productInCart){
+        productInCart.quantity++
+    }else{
+        cart.push(itemAdd)
+            // name: itemAdd.name,
+            // image: itemAdd.image,
+            // price: itemAdd.price
+
+        
+    }
+    
+    drawCart()
+}
+
+function cartTotal(){
+
+}
 
 drawParlor()
