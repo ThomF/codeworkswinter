@@ -7,7 +7,7 @@ const heroes = [
         image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8976d5d-0e1b-4ad2-bb35-823d462c0ad5/d89skuo-8a4ea3fe-4e35-4cfe-b96f-550a4f20c767.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U4OTc2ZDVkLTBlMWItNGFkMi1iYjM1LTgyM2Q0NjJjMGFkNVwvZDg5c2t1by04YTRlYTNmZS00ZTM1LTRjZmUtYjk2Zi01NTBhNGYyMGM3NjcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Nmst0Vlbk3q6C_pIEk_JLqRoImDJGo2OlQQtie1WQuw'
     },
     {
-        name: 'Ironstag',
+        name: 'Mace',
         type: 'mage',
         damage: 10,
         health: 65,
