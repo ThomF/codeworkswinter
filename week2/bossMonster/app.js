@@ -12,6 +12,13 @@ const heroes = [
         damage: 10,
         health: 65,
         image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/016fc6fa-c326-4d87-9a5f-fd9d307155c2/d8gn0g9-27bff5aa-b311-4ed4-968e-0702e19a2b4f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzAxNmZjNmZhLWMzMjYtNGQ4Ny05YTVmLWZkOWQzMDcxNTVjMlwvZDhnbjBnOS0yN2JmZjVhYS1iMzExLTRlZDQtOTY4ZS0wNzAyZTE5YTJiNGYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iv8vaWksaqZoqvn0ZFe1qoM-6SpYaPH0DpgQRnRjOxc'
+    },
+    {
+        name: 'Grebble',
+        type: 'goblin',
+        damage: 2,
+        health: 25,
+        image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3f6f528b-9c63-4fe8-9626-aafa748edaf5/d7rhwsi-5a8b5cf7-a724-4a53-91a6-f72cd339e25b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzNmNmY1MjhiLTljNjMtNGZlOC05NjI2LWFhZmE3NDhlZGFmNVwvZDdyaHdzaS01YThiNWNmNy1hNzI0LTRhNTMtOTFhNi1mNzJjZDMzOWUyNWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jfkwQJoANvTMZvYy3XUcV-hajQeG9ArAGUjc5BOcWxc'
     }
 ]
 
@@ -42,7 +49,7 @@ function attackBoss(){
     let bossHealth = boss.health -= heroDamageTotal
     // debugger
     if (boss.health <= 0) {
-        boss.health = boss.maxHealth += 125
+        boss.health = boss.maxHealth += 500
         backpack.gold += 20
 
         heroes.forEach(hero => {
@@ -76,7 +83,7 @@ function drawHeroes(){
                 >
         </div>
         <div class="text-center">
-            <h4>HP:${hero.health}</h4>
+            <h4 id="hero-health">HP:${hero.health}</h4>
             <h4>${hero.type}</h4>
         </div>
     </div>`
@@ -106,11 +113,27 @@ healthBarElem.innerHTML = template
 
 }
 
+function goldUp(){
+    let goldCount = document.getElementById('gold')
+    goldCount.innerText = backpack.gold += 2
+}
+function heroDamage(){
+    heroes.forEach(damage => {
+        damage.health -= 3
+
+        if(damage.health < 0){
+            damage.health = 0
+        }
+    })
+
+    drawHeroes()
+}
 
 // function buyPotion(){}
 // function buyHeroOne(){}
 // function buyHeroTwo(){}
 // function youLost(){}
 
-
+setInterval(goldUp, 2000)
+setInterval(heroDamage, 3000)
 drawHeroes()
