@@ -2,16 +2,16 @@ const heroes = [
     {
         name: 'Slabrock',
         type: 'dwarf',
-        image: 'https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg',
         damage: 7,
         health: 100,
+        image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8976d5d-0e1b-4ad2-bb35-823d462c0ad5/d89skuo-8a4ea3fe-4e35-4cfe-b96f-550a4f20c767.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U4OTc2ZDVkLTBlMWItNGFkMi1iYjM1LTgyM2Q0NjJjMGFkNVwvZDg5c2t1by04YTRlYTNmZS00ZTM1LTRjZmUtYjk2Zi01NTBhNGYyMGM3NjcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Nmst0Vlbk3q6C_pIEk_JLqRoImDJGo2OlQQtie1WQuw'
     },
     {
         name: 'Ironstag',
         type: 'mage',
-        image: 'https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg',
         damage: 10,
         health: 65,
+        image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/016fc6fa-c326-4d87-9a5f-fd9d307155c2/d8gn0g9-27bff5aa-b311-4ed4-968e-0702e19a2b4f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzAxNmZjNmZhLWMzMjYtNGQ4Ny05YTVmLWZkOWQzMDcxNTVjMlwvZDhnbjBnOS0yN2JmZjVhYS1iMzExLTRlZDQtOTY4ZS0wNzAyZTE5YTJiNGYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iv8vaWksaqZoqvn0ZFe1qoM-6SpYaPH0DpgQRnRjOxc'
     }
 ]
 
@@ -46,10 +46,11 @@ function attackBoss(){
         backpack.gold += 20
 
         heroes.forEach(hero => {
-        hero.damage += 5
+        hero.damage += .5
         hero.health += 10
     })
     console.log(backpack)
+    console.log(boss.health)
     
     }
     healthPercentage = (boss.health/boss.maxHealth)*100
@@ -67,11 +68,11 @@ function drawHeroes(){
 
     for (let i = 0; i < heroes.length; i++) {
         const hero = heroes[i];
-        template += `<div class="col-2 border border-success text-light">
+        template += `<div class="col-2  text-light">
         <div class="d-flex justify-content-evenly align-items-center ">
             <h4>${hero.name}</h4>
             <img class="img-fluid hero-1"
-                src="${heroes.image}" alt=""
+                src=${hero.image} alt=""
                 >
         </div>
         <div class="text-center">
