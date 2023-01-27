@@ -2,23 +2,23 @@ const heroes = [
     {
         name: 'Slabrock',
         type: 'dwarf',
-        damage: 5,
+        image: 'https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg',
+        damage: 7,
         health: 100,
-        image: "asset/Dwarf.gif"
     },
     {
         name: 'Ironstag',
         type: 'mage',
+        image: 'https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg',
         damage: 10,
         health: 65,
-        image:"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/016fc6fa-c326-4d87-9a5f-fd9d307155c2/d8gn0g9-27bff5aa-b311-4ed4-968e-0702e19a2b4f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzAxNmZjNmZhLWMzMjYtNGQ4Ny05YTVmLWZkOWQzMDcxNTVjMlwvZDhnbjBnOS0yN2JmZjVhYS1iMzExLTRlZDQtOTY4ZS0wNzAyZTE5YTJiNGYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iv8vaWksaqZoqvn0ZFe1qoM-6SpYaPH0DpgQRnRjOxc"
     }
 ]
 
 
 const boss = {
-    health: 100,
-    maxHealth: 100,
+    health: 1000,
+    maxHealth: 1000,
     damage: 5,
     level: 1
 }
@@ -42,7 +42,7 @@ function attackBoss(){
     let bossHealth = boss.health -= heroDamageTotal
     // debugger
     if (boss.health <= 0) {
-        boss.health = boss.maxHealth += 35
+        boss.health = boss.maxHealth += 125
         backpack.gold += 20
 
         heroes.forEach(hero => {
